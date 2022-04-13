@@ -42,4 +42,14 @@ class Pizza {
         : 0.0;
     imageUrl = (json['imageUrl'] != null) ? json['imageUrl'].toString() : '';
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      keyId: id,
+      keyName: pizzaName,
+      keyDescription: description,
+      keyPrice: price,
+      keyImage: imageUrl,
+    };
+  }
 }
