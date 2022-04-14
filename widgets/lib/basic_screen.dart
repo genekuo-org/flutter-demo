@@ -24,11 +24,11 @@ class BasicScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            /*AspectRatio(
+            AspectRatio(
               aspectRatio: 1.0,
               child: ImmutableWidget(),
-            ),*/
-            Image.asset('assets/beach.jpg'),
+            ),
+            //Image.asset('assets/beach.jpg'),
             TextLayout()
           ],
         ),

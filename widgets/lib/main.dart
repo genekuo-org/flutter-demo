@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/immutable_widget.dart';
 
 import 'basic_screen.dart';
 
@@ -12,6 +13,7 @@ class StaticApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: BasicScreen(),
+      //home: ImmutableWidget(),
     );
   }
 }
