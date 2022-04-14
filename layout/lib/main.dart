@@ -5,6 +5,7 @@ import 'e_commerce_screen.dart';
 import 'flex_screen.dart';
 
 void main() {
+  //runApp(MyApp());
   runApp(StaticApp());
 }
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      //home: ProfileScreen(),
       home: FlexScreen(),
     );
   }

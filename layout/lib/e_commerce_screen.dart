@@ -58,24 +58,26 @@ class ECommerceScreen extends StatelessWidget {
     return Row(
       children: <Widget>[
         _buildToggleItem(context, 'Recommended', selected: true),
-        _buildToggleItem(context, 'Formal Wear'),
-        _buildToggleItem(context, 'Casual Wear'),
+        _buildToggleItem(context, 'Formal'),
+        _buildToggleItem(context, 'Casual'),
       ],
     );
   }
 
   Widget _buildToggleItem(BuildContext context, String text,
       {bool selected = false}) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 17,
-          color: selected
-              ? null
-              : Theme.of(context).textTheme.titleSmall?.color?.withOpacity(0.5),
-          fontWeight: selected ? FontWeight.bold : null,
+    return Expanded( // to avoid overflow
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: 17,
+            color: selected
+                ? null
+                : Theme.of(context).textTheme.titleSmall?.color?.withOpacity(0.5),
+            fontWeight: selected ? FontWeight.bold : null,
+          ),
         ),
       ),
     );
@@ -83,6 +85,7 @@ class ECommerceScreen extends StatelessWidget {
 
   AppBar _buildAppBar() {
     return AppBar(
+      //backgroundColor: Colors.green,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(30),
